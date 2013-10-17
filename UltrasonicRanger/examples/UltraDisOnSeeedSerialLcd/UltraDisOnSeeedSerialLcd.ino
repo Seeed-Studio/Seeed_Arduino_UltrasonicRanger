@@ -30,7 +30,7 @@
 #include <SerialLCD.h>
 #include "Ultrasonic.h"
 
-SerialLCD slcd(11,12);
+SerialLCD slcd(4,5);
 Ultrasonic ultrasonic(7);
 void setup()
 {
