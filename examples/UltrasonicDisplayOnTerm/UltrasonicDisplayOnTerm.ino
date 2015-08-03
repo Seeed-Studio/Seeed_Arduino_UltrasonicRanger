@@ -49,12 +49,15 @@ void loop()
 {
 	long RangeInInches;
 	long RangeInCentimeters;
-	RangeInInches = ultrasonic.MeasureInInches();
-	RangeInCentimeters = ultrasonic.MeasureInCentimeters();
+	
 	Serial.println("The distance to obstacles in front is: ");
+	RangeInInches = ultrasonic.MeasureInInches();
 	Serial.print(RangeInInches);//0~157 inches
 	Serial.println(" inch");
+	delay(250)
+	
+	RangeInCentimeters = ultrasonic.MeasureInCentimeters(); // two measurements should keep an interval
 	Serial.print(RangeInCentimeters);//0~400cm
 	Serial.println(" cm");
-	delay(100);
+	delay(250);
 }
