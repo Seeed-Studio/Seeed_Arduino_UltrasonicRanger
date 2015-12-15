@@ -9,8 +9,9 @@ This Grove - ultrasonic sensor is a non-contact distance measurement module whic
 
 1. Clone this repo or download as a zip;
 2. Unzip the zip file if you downloaded a zip file;
-3. Copy the directory "Grove_Barometer_Sensor" into Arduino's libraries directory;
-4. Open Arduino IDE, go to "File"->"Examples"->"Grove_Barometer_Sensor"
+3. Remove the string "-master" if you download as a zip file;
+4. Copy the directory "Grove_Ultrasonic_Ranger" into Arduino's libraries directory;
+5. Open Arduino IDE, go to "File"->"Examples"->"Grove_Ultrasonic_Ranger"
 
 Assume that you connected the grove correctly. 
 
