@@ -34,6 +34,36 @@
 #include "Arduino.h"
 #include "Ultrasonic.h"
 
+#ifdef STM32F4
+
+static uint32_t MicrosDiff(uint32_t begin, uint32_t end)
+{
+	return end - begin;
+}
+
+static uint32_t pulseIn(uint32_t pin, uint32_t state, uint32_t timeout = 1000000L)
+{
+	uint32_t begin = micros();
+	
+	// wait for any previous pulse to end
+	while (digitalRead(pin)) if (MicrosDiff(begin, micros()) >= timeout) return 0;
+	
+	// wait for the pulse to start
+	while (!digitalRead(pin)) if (MicrosDiff(begin, micros()) >= timeout) return 0;
+	uint32_t pulseBegin = micros();
+	
+	// wait for the pulse to stop
+	while (digitalRead(pin)) if (MicrosDiff(begin, micros()) >= timeout) return 0;
+	uint32_t pulseEnd = micros();
+	
+	SerialUSB.print(MicrosDiff(pulseBegin, pulseEnd));
+	SerialUSB.print(' ');
+	
+	return MicrosDiff(pulseBegin, pulseEnd);
+}
+
+#endif
+
 Ultrasonic::Ultrasonic(int pin)
 {
 	_pin = pin;
