@@ -13,10 +13,6 @@ Ultrasonic	KEYWORD1
 #######################################
 MeasureInCentimeters	KEYWORD2
 MeasureInInches	KEYWORD2
-slcd.begin  KEYWORD2
-slcd.clear  KEYWORD2
-slcd.setCursor  KEYWORD2
-slcd.print  KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################
