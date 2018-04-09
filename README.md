@@ -1,7 +1,7 @@
 Grove_Ultrasonic_Ranger
 --------------------------------
 
-[![Grove_Ultrasonic_Ranger](http://www.seeedstudio.com/wiki/images/thumb/3/3a/Ultrasonic_Ranger.jpg/300px-Ultrasonic_Ranger.jpg)](http://www.seeedstudio.com/depot/grove-ultrasonic-ranger-p-960.html?cPath=144_149)
+<img src="https://statics3.seeedstudio.com/seeed/img/2016-09/kIyY21sbC6ct7JYzCWf1mAPs.jpg" width="300"><img src="https://statics3.seeedstudio.com/seeed/img/2016-09/8GLUR8JbFtrFzzISisBuVDey.jpg" width="300">
 
 This Grove - ultrasonic sensor is a non-contact distance measurement module which works at 42KHz, suitable for projects that require middle distance measurement. 
 
@@ -15,7 +15,7 @@ This Grove - ultrasonic sensor is a non-contact distance measurement module whic
 
 Assume that you connected the grove correctly. 
 
-For connection guide and more information, please refer to [wiki page](http://www.seeedstudio.com/wiki/Grove_-_Ultrasonic_Ranger).
+For connection guide and more information, please refer to [wiki page](http://wiki.seeedstudio.com/Grove-Ultrasonic_Ranger/).
 
     
 ----
