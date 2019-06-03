@@ -34,7 +34,7 @@
 #include "Arduino.h"
 #include "Ultrasonic.h"
 
-#ifdef STM32F4
+#ifdef ARDUINO_ARCH_STM32F4
 
 static uint32_t MicrosDiff(uint32_t begin, uint32_t end)
 {
@@ -59,7 +59,7 @@ static uint32_t pulseIn(uint32_t pin, uint32_t state, uint32_t timeout = 1000000
 	return MicrosDiff(pulseBegin, pulseEnd);
 }
 
-#endif
+#endif // ARDUINO_ARCH_STM32F4
 
 Ultrasonic::Ultrasonic(int pin)
 {
