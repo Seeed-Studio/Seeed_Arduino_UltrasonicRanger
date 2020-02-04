@@ -1,4 +1,4 @@
-Grove_Ultrasonic_Ranger
+Grove_Ultrasonic_Ranger  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_Ultrasonic_Ranger.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_Ultrasonic_Ranger)
 --------------------------------
 
 <img src="https://statics3.seeedstudio.com/seeed/img/2016-09/kIyY21sbC6ct7JYzCWf1mAPs.jpg" width="300"><img src="https://statics3.seeedstudio.com/seeed/img/2016-09/8GLUR8JbFtrFzzISisBuVDey.jpg" width="300">
