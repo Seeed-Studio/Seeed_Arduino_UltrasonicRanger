@@ -68,8 +68,8 @@ static uint32_t pulseIn(uint32_t pin, uint32_t state, uint32_t timeout = 1000000
 Ultrasonic::Ultrasonic(int pin) {
     _pin = pin;
 }
-/*The measured distance from the range 0 to 400 Centimeters*/
-long Ultrasonic::MeasureInCentimeters(void) {
+
+long Ultrasonic::duration() {
     pinMode(_pin, OUTPUT);
     digitalWrite(_pin, LOW);
     delayMicroseconds(2);
@@ -79,22 +79,23 @@ long Ultrasonic::MeasureInCentimeters(void) {
     pinMode(_pin, INPUT);
     long duration;
     duration = pulseIn(_pin, HIGH);
+    return duration;
+}
+/*The measured distance from the range 0 to 400 Centimeters*/
+long Ultrasonic::MeasureInCentimeters(void) {
     long RangeInCentimeters;
-    RangeInCentimeters = duration / 29 / 2;
+    RangeInCentimeters = duration() / 29 / 2;
     return RangeInCentimeters;
+}
+/*The measured distance from the range 0 to 4000 Millimeters*/
+long Ultrasonic::MeasureInMillimeters(void) {
+    long RangeInMillimeters;
+    RangeInMillimeters = duration() * (10/2) / 29;
+    return RangeInMillimeters;
 }
 /*The measured distance from the range 0 to 157 Inches*/
 long Ultrasonic::MeasureInInches(void) {
-    pinMode(_pin, OUTPUT);
-    digitalWrite(_pin, LOW);
-    delayMicroseconds(2);
-    digitalWrite(_pin, HIGH);
-    delayMicroseconds(5);
-    digitalWrite(_pin, LOW);
-    pinMode(_pin, INPUT);
-    long duration;
-    duration = pulseIn(_pin, HIGH);
     long RangeInInches;
-    RangeInInches = duration / 74 / 2;
+    RangeInInches = duration() / 74 / 2;
     return RangeInInches;
 }
