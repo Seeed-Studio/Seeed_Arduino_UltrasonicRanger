@@ -40,6 +40,10 @@
 
 #include "Ultrasonic.h"
 
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
 Ultrasonic ultrasonic(7);
 void setup() {
     Serial.begin(9600);
